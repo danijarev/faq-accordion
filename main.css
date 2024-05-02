@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    font-family: "Work sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: hsl(275, 100%, 97%) url(./assets/images/background-pattern-mobile.svg) no-repeat;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    overflow-y: visible;
+}
+
+.main-area {
+    background-color: white;
+    width: 90%;
+    height: auto;
+    padding: 1.5rem 1.5rem;
+    margin: 7.5rem 0;
+    border-radius: 7px;
+    overflow-y: visible;
+}
+
+.star-icon {
+    display: block;
+    float: left;
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 1.7rem;
+    position: relative;
+    top: 0.3rem;
+}
+
+.title {
+    font-weight: 700;
+    margin: 0;
+}
+
+.article {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 0.5rem;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 90% 1fr;
+    grid-template-areas: "a b"
+                         "c c";
+    margin-bottom: auto;
+    align-items: center;
+}
+
+.question {
+    font-weight: 600;
+    width: 95%;
+    grid-area: a;
+}
+
+.answer {
+    font-weight: 400;
+    color: hsl(292, 16%, 49%);
+    width: 100%;
+    grid-area: c;
+}
+
+.hidden {
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    padding: 1rem;
+    color: hsl(292, 16%, 49%);
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 376px) {
+    body {
+        background: hsl(275, 100%, 97%) url(./assets/images/background-pattern-desktop.svg) no-repeat;
+    }
+
+    .title {
+        font-size: 3rem;
+        margin: 1rem 0 2rem;
+    }
+
+    .star-icon {
+        margin-top: 1.4rem;
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .main-area {
+        max-width: 50%;
+        border-radius: 15px;
+        margin-top: 17vh;
+        margin-bottom: auto;
+        }
+
+    .article {
+        grid-gap: 2rem;
+    }
+
+    .attribution {
+        margin-top: 7.5rem;
+    }
+}
